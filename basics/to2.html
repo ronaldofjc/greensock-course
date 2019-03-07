@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TweenMax.to()</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <a class="title-link" href="/basics/">
+        <h1 class="title">Você já ouviu falar das 4 leis esprituais?</h1>
+      </a>
+    </header>
+    <br />
+    <section class="gallery">
+      <article class="item">
+        <div class="image"></div>
+        <div class="description">
+          <span>Ronaldo Feitosa</span> <span></span> <span></span>
+        </div>
+      </article>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script>
+      const items = document.querySelectorAll(".item");
+      const title = document.querySelector(".title");
+      TweenMax.to(title, 2, {
+        //x: 400,
+        //opacity: 0
+        scale: 2,
+        ease: Bounce.easeOut
+      });
+      TweenMax.to(items, 2.5, {
+        rotation: 360,
+        scale: 1.5
+      });
+    </script>
+  </body>
+</html>
